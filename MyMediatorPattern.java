@@ -21,7 +21,6 @@ public class MyMediatorPattern {
     public static void main(String[] args) {
         IUser manager = new Manager();
         IUser staff = new Staff();
-        Mediator med = new Mediator();
         ArrayList<String> users= new ArrayList<String>();
         
         title= new String[2];
@@ -29,7 +28,7 @@ public class MyMediatorPattern {
         title[1]="manager";
         
         for (int i=0; i< 8; i++){
-            users.add(title[myRandom()]+i);
+            users.add(title[titleRandom()]+i);
         }
 
         for (int i=0; i< users.size(); i++){
@@ -43,7 +42,7 @@ public class MyMediatorPattern {
 
     }
     
-    private static int myRandom(){
+    private static int titleRandom(){
         return (int) (Math.random()*title.length);
     }
 
